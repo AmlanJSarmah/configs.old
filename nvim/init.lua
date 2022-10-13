@@ -9,6 +9,7 @@ require "ajsarmah.alpha"
 
 -- Programming
 require "ajsarmah.treesitter"
+require "ajsarmah.coc"
 require "ajsarmah.toggleterm"
 
 
