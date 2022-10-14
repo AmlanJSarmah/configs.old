@@ -35,6 +35,10 @@ local options = {
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
 }
 
+-- Netrw config 
+vim.g.netrw_liststyle = 3
+vim.g.netrw_banner = false
+
 vim.opt.shortmess:append "c"
 
 for k, v in pairs(options) do

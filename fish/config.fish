@@ -8,6 +8,8 @@ set fish_greeting ""
 
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
 
+export EDITOR='nvim'
+
 # lf icons
 export LF_ICONS="\
 tw=:\
