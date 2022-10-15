@@ -62,6 +62,7 @@ keys = [
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod, "control"], "l", lazy.spawn("betterlockscreen -l"),desc="locks the damn screen"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 ]
 
@@ -151,8 +152,15 @@ screens = [
                 widget.Spacer(),
                 widget.Systray(),
                 separator,
-                widget.Battery(format=battery_display()),
                 separator,
+                widget.TextBox(text=" ", fontsize=24, padding=0),
+                # widget for spotify track info and control!
+                widget.Mpris2(name="spotify",padding=0, stopped_text="None", stop_pause_text="{track}",playing_text="{track}",display_metadata=["xesam:title", "xesam:artist"], objname="org.mpris.MediaPlayer2.spotify"),
+                separator,
+                separator,
+                widget.Battery(format=battery_display(),padding=0),
+                separator,
+                separator, 
                 widget.TextBox(text=connect(),fontsize=20,padding=0),
                 widget.Wlan(format='  {essid}',padding=0), # The Wlan widget uses a library called iwlib as dependency so to use it we must install 'iwlib' via the pip package manager.
                 separator,
