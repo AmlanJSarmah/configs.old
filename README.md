@@ -20,4 +20,5 @@ The following dependencies must be installed on your computer
 10. Nitrogen (wallpaper utility used in qtile when autostart)
 11. packer.nvim (used in neovim)
 12. betterlockscreen (look in AUR, used to lock the screen)
-13. iwlib, psutils and dbus-next via pip (used in the qtile bar)
+13. Spotify 
+14. iwlib, psutils, dbus and dbus-next via pip (used in the qtile bar)

@@ -153,9 +153,9 @@ screens = [
                 widget.Systray(),
                 separator,
                 separator,
-                widget.TextBox(text=" ", fontsize=24, padding=0),
+                widget.TextBox(text="", fontsize=24, padding=0),
                 # widget for spotify track info and control!
-                widget.Mpris2(name="spotify",padding=0, stopped_text="None", stop_pause_text="{track}",playing_text="{track}",display_metadata=["xesam:title", "xesam:artist"], objname="org.mpris.MediaPlayer2.spotify"),
+                widget.Mpris2(name="spotify",padding=0, stop_pause_text="  {track}",playing_text="  {track}",display_metadata=["xesam:title", "xesam:artist"], objname="org.mpris.MediaPlayer2.spotify"),
                 separator,
                 separator,
                 widget.Battery(format=battery_display(),padding=0),
