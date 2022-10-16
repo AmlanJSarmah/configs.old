@@ -27,8 +27,8 @@ def connect(host='http://google.com'):
     try:
         urllib.request.urlopen(host)
         return "直"
-    except:
-        return "睊"
+    except: 
+        return "睊 "
 
 def battery_display():
     battery = get_battery()

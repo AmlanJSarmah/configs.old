@@ -11,6 +11,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 from typing import List  # noqa: F401from typing import List  # noqa: F401
 from utils import battery_display, connect
+from spotify_status import exec
 
 class Colors:
     BLACK: str = "000000"
@@ -57,6 +58,7 @@ keys = [
         desc="Toggle between split and unsplit sides of stack",
     ),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod],"f",lazy.spawn("rofi -show drun"), desc="Launch Rofi App Launcher"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
@@ -117,7 +119,7 @@ for i in groups:
     )
 
 widget_defaults = dict(
-    font='Fira Code',
+    font='DejaVuSansMono Nerd Font Complete',
     fontsize=13,
     padding=7,
 )
@@ -137,7 +139,6 @@ screens = [
                     active=palette.WHITE,
                     inactive=palette.WHITE,
                     rounded=True,
-                    font="Fira Code",
                     highlight_method="block",
                     highlight_color=palette.DARK,
                     block_highlight_text_color=palette.WHITE,
@@ -153,14 +154,14 @@ screens = [
                 widget.Systray(),
                 separator,
                 separator,
-                widget.TextBox(text="", fontsize=24, padding=0),
+                widget.TextBox(text="", fontsize=24, padding=0, mouse_callbacks={"Button1":lazy.spawn(exec())}),
                 # widget for spotify track info and control!
                 widget.Mpris2(name="spotify",padding=0, stop_pause_text="  {track}",playing_text="  {track}",display_metadata=["xesam:title", "xesam:artist"], objname="org.mpris.MediaPlayer2.spotify"),
                 separator,
                 separator,
                 widget.Battery(format=battery_display(),padding=0),
                 separator,
-                separator, 
+                separator,
                 widget.TextBox(text=connect(),fontsize=20,padding=0),
                 widget.Wlan(format='  {essid}',padding=0), # The Wlan widget uses a library called iwlib as dependency so to use it we must install 'iwlib' via the pip package manager.
                 separator,
