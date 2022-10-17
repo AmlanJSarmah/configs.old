@@ -16,9 +16,16 @@ The following dependencies must be installed on your computer
 6. picom-git (look at the AUR, used in qtile while autostart)
 7. qtile
 8. Rofi
-9. Source Code Pro and Fira Code Nerd Fonts
+9. Source Code Pro, DejaVu Sans Mono and Fira Code Nerd Fonts
 10. Nitrogen (wallpaper utility used in qtile when autostart)
 11. packer.nvim (used in neovim)
 12. betterlockscreen (look in AUR, used to lock the screen)
 13. Spotify 
 14. iwlib, psutils, dbus and dbus-next via pip (used in the qtile bar)
+15. Starship prompt
+
+### Resources
+There are a no of resources that helped mw with the config specially with Neovim, Picom and Rofi. Here is the list of all the resources 
+1. For Rofi and Picom : https://www.youtube.com/c/EricMurphyxyz
+2. For Nvim : https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
+PS: The configs for picom and rofi are as identical as show in the videos by Eric Murphy, but the Neovim configs is heavily customized and only uses the playlist by chris@machine as a referance.
