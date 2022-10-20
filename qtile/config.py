@@ -119,7 +119,7 @@ for i in groups:
     )
 
 widget_defaults = dict(
-    font='DejaVuSansMono Nerd Font Complete',
+    font='Source Code Pro',
     fontsize=13,
     padding=7,
 )
