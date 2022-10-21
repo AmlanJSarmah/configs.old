@@ -5,6 +5,7 @@ My Qtile config along with various utils like lf(file manager), helix(text edito
 ![desktop1](https://user-images.githubusercontent.com/99042379/194882428-e7a565b1-918d-4d14-8484-d0b64ef453f2.png)
 ![desktop2](https://user-images.githubusercontent.com/99042379/194882481-e0310524-66e9-4316-93cf-8d0e913d9a09.png)
 ![2022-10-10-193921_1920x1080_scrot](https://user-images.githubusercontent.com/99042379/194885764-6fa15801-d3f8-474b-86c1-631bc8d303a8.png)
+![neovim](https://user-images.githubusercontent.com/99042379/197107570-bcf3229d-08af-4c98-80c8-594ce2246b3f.png)
 
 ### Dependencies
 The following dependencies must be installed on your computer
@@ -23,6 +24,7 @@ The following dependencies must be installed on your computer
 13. Spotify 
 14. iwlib, psutils, dbus and dbus-next via pip (used in the qtile bar)
 15. Starship prompt
+16. exa (an alternative to ls)
 
 ### Resources
 There are a no of resources that helped mw with the config specially with Neovim, Picom and Rofi. Here is the list of all the resources 
