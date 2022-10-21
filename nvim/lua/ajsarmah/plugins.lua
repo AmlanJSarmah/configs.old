@@ -37,10 +37,12 @@ use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in neov
 use 'nvim-lua/plenary.nvim' -- Useful Lua functions used by many plugins
 use 'nvim-lualine/lualine.nvim' -- lualine
 use 'goolord/alpha-nvim' -- Neovim dashboard
+use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-devicons'}
 
 --Programming
 use 'akinsho/toggleterm.nvim' -- Allow us to use the terminal inside Neovim
 use 'jiangmiao/auto-pairs' -- Autocomplete brackets
+use {'neoclide/coc.nvim', branch = 'release'} -- COC
 
 --Treesitter
 use "nvim-treesitter/nvim-treesitter" --Syntax highlighting

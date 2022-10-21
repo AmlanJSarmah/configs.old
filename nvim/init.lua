@@ -5,7 +5,7 @@ require "ajsarmah.plugins"
 require "ajsarmah.lualine"
 require "ajsarmah.colorschemes"
 require "ajsarmah.alpha"
-
+require "ajsarmah.bufferline"
 
 -- Programming
 require "ajsarmah.treesitter"
