@@ -30,4 +30,5 @@ The following dependencies must be installed on your computer
 There are a no of resources that helped mw with the config specially with Neovim, Picom and Rofi. Here is the list of all the resources 
 1. For Rofi and Picom : https://www.youtube.com/c/EricMurphyxyz
 2. For Nvim : https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
+
 PS: The configs for picom and rofi are as identical as show in the videos by Eric Murphy, but the Neovim configs is heavily customized and only uses the playlist by chris@machine as a referance.
