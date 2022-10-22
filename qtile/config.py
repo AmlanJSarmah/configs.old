@@ -132,6 +132,7 @@ screens = [
     Screen(
         top=bar.Bar(
             [
+                separator,
                 widget.GroupBox(
                     fontsize=13,
                     padding_x=5,
@@ -159,7 +160,7 @@ screens = [
                 widget.Mpris2(name="spotify",padding=0, stop_pause_text="  {track}",playing_text="  {track}",display_metadata=["xesam:title", "xesam:artist"], objname="org.mpris.MediaPlayer2.spotify"),
                 separator,
                 separator,
-                widget.Battery(format=battery_display(),padding=0),
+                widget.Battery(format=battery_display(),padding=0,update_interval=1),
                 separator,
                 separator,
                 widget.TextBox(text=connect(),fontsize=20,padding=0),
