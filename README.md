@@ -26,6 +26,7 @@ The following dependencies must be installed on your computer
 15. Starship prompt
 16. exa (an alternative to ls)
 17. dmenu
+18. Drunst
 
 ### Resources
 There are a no of resources that helped mw with the config specially with Neovim, Picom and Rofi. Here is the list of all the resources 
