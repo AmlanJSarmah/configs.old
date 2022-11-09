@@ -28,6 +28,7 @@ The following dependencies must be installed on your computer
 17. dmenu
 18. Drunst (notification daemon)
 19. Brillo (for brightness, look AUR)
+20. pavucontrol and pamixer for scripts
 
 ### Resources
 There are a no of resources that helped mw with the config specially with Neovim, Picom and Rofi. Here is the list of all the resources 
