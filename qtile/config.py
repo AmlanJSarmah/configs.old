@@ -1,17 +1,12 @@
 # -*- coding: utf-8 -*-
 import os
-import re
-import socket
 import subprocess
 from libqtile import qtile
 from libqtile.config import Click, Drag, Group, KeyChord, Key, Match, Screen
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
-from typing import List  # noqa: F401from typing import List  # noqa: F401
 from utils import battery_display, connect
-from spotify_status import exec
 
 class Colors:
     BLACK: str = "000000"
@@ -24,6 +19,7 @@ mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 terminal = "alacritty"      # My terminal of choice
 myBrowser = "firefox" # My browser of choice
 palette = Colors()
+home = os.path.expanduser('~')
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -64,8 +60,17 @@ keys = [
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod, "control"], "l", lazy.spawn("betterlockscreen -l"),desc="locks the damn screen"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([mod, "control"], "c", lazy.spawn("betterlockscreen -l"),desc="locks the damn screen"),
+    Key([mod], "r", lazy.spawn("dmenu_run -l 10 -fn 'Source Code Pro-12'"), desc="Launch Dmenu run prompt"),
+
+    # Custom keybindings for screenshot, brightness and volume
+    Key([mod], "s", lazy.spawn(str(home) + "/.local/bin/screenshot.sh all"),desc="Take a screenshot of entire screen"),
+    Key([mod, "shift"], "s", lazy.spawn(str(home) + "/.local/bin/screenshot.sh window"),desc="Take a screenshot of active window"),
+    Key([mod, "control"], "s", lazy.spawn(str(home) + "/.local/bin/screenshot.sh select"),desc="Take a screenshot of selected area"),
+    Key([mod, "shift"], "v", lazy.spawn(str(home) + "/.local/bin/changevolume.sh down"),desc="Decrease volume"),
+    Key([mod], "v", lazy.spawn(str(home) + "/.local/bin/changevolume.sh up"),desc="Increases volume"),
+    Key([mod], "b", lazy.spawn(str(home) + "/.local/bin/changebrightness.sh up"),desc="Increases brightness"),
+    Key([mod, "shift"], "b", lazy.spawn(str(home) + "/.local/bin/changebrightness.sh down"),desc="Decrease brightness"),
 ]
 
 layout_theme = {
@@ -149,13 +154,19 @@ screens = [
                     hide_unused=True
                 ),
                 separator,
-                widget.Prompt(),
+                #widget.Prompt(),
                 #widget.WindowName(fontsize=15, format='{name}'),
                 widget.Spacer(),
                 widget.Systray(),
                 separator,
                 separator,
-                widget.TextBox(text="", fontsize=24, padding=0, mouse_callbacks={"Button1":lazy.spawn(exec())}),
+                widget.TextBox(text="", fontsize=24, padding=0, mouse_callbacks={"Button1":lazy.spawn(myBrowser + " -new-window github.com/A-J-Sarmah")}),
+                separator,
+                separator,
+                widget.TextBox(text="墳", fontsize=24, padding=0, mouse_callbacks={"Button1":lazy.spawn(str(home) + "/.local/bin/changevolume.sh mute"), "Button4":lazy.spawn(str(home) + "/.local/bin/changevolume.sh up"), "Button5":lazy.spawn(str(home) + "/.local/bin/changevolume.sh down")}),
+                separator,
+                separator,
+                widget.TextBox(text="", fontsize=24, padding=0, mouse_callbacks={"Button1":lambda:qtile.cmd_spawn("spotify")}),
                 # widget for spotify track info and control!
                 widget.Mpris2(name="spotify",padding=0, stop_pause_text="  {track}",playing_text="  {track}",display_metadata=["xesam:title", "xesam:artist"], objname="org.mpris.MediaPlayer2.spotify"),
                 separator,
