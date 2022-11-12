@@ -9,7 +9,6 @@ require "ajsarmah.bufferline"
 
 -- Programming
 require "ajsarmah.treesitter"
-require "ajsarmah.coc"
 require "ajsarmah.toggleterm"
 
 

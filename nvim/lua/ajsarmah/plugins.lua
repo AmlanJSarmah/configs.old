@@ -42,7 +42,6 @@ use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-de
 --Programming
 use 'akinsho/toggleterm.nvim' -- Allow us to use the terminal inside Neovim
 use 'jiangmiao/auto-pairs' -- Autocomplete brackets
-use {'neoclide/coc.nvim', branch = 'release'} -- COC
 
 --Treesitter
 use "nvim-treesitter/nvim-treesitter" --Syntax highlighting
