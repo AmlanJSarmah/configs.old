@@ -61,7 +61,7 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod, "control"], "c", lazy.spawn("betterlockscreen -l"),desc="locks the damn screen"),
-    Key([mod], "r", lazy.spawn("dmenu_run -l 10 -fn 'Source Code Pro-12'"), desc="Launch Dmenu run prompt"),
+    Key([mod], "r", lazy.spawn("dmenu_run -l 10 -fn 'Source Code Pro-12' -p 'Run'"), desc="Launch Dmenu run prompt"),
 
     # Custom keybindings for screenshot, brightness and volume
     Key([mod], "s", lazy.spawn(str(home) + "/.local/bin/screenshot.sh all"),desc="Take a screenshot of entire screen"),
@@ -137,7 +137,7 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                separator,
+                #separator,
                 widget.GroupBox(
                     fontsize=13,
                     padding_x=5,
@@ -182,7 +182,7 @@ screens = [
                 widget.Clock(format='  %I:%M %p', padding=0),
                 separator,
                 separator,
-                widget.TextBox(text="", fontsize=20 ,padding=0),
+                widget.TextBox(text="", fontsize = 20 ,padding=0),
                 widget.Clock(format = '  %a %d/%m/%y',padding=0),
                 separator,
             ],
