@@ -1,5 +1,5 @@
 # window-manager-config
-My Qtile config along with various utils like lf(file manager), helix(text editor), alacritty(terminal emulator), starship, picom, fish, rofi, nvim.
+My Qtile config along with various utils like lf(file manager), alacritty(terminal emulator), starship, picom, fish, rofi, nvim.
 
 ### Screenshots
 ![desktop1](https://user-images.githubusercontent.com/99042379/194882428-e7a565b1-918d-4d14-8484-d0b64ef453f2.png)
@@ -14,7 +14,7 @@ The following dependencies must be installed on your computer
 3. helix
 4. lf
 5. neovim
-6. picom-git (look at the AUR, used in qtile while autostart)
+6. picom (it is a compositor used in qtile while autostart)
 7. qtile
 8. Rofi
 9. Source Code Pro and Fira Code Nerd Fonts
