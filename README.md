@@ -29,6 +29,8 @@ The following dependencies must be installed on your computer
 18. Drunst (notification daemon)
 19. Brillo (for brightness, look AUR)
 20. pavucontrol and pamixer for scripts
+21. sddm login manager
+22. multicolor-sddm-theme (look AUR)
 
 ### Resources
 There are a no of resources that helped mw with the config specially with Neovim, Picom and Rofi. Here is the list of all the resources 
