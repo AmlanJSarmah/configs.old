@@ -32,6 +32,15 @@ The following dependencies must be installed on your computer
 21. sddm login manager
 22. multicolor-sddm-theme (look AUR)
 
+### Setup SDDM
+Look at
+> /usr/lib/sddm/sddm.conf.d/
+there should be a **default.conf** edit the file and in theme section specift 
+> Current = multicolor-sddm-theme
+
+P.S. if the first folder don't exist look 
+> /etc/sddm.conf
+
 ### Resources
 There are a no of resources that helped mw with the config specially with Neovim, Picom and Rofi. Here is the list of all the resources 
 1. For Rofi and Picom : https://www.youtube.com/c/EricMurphyxyz
