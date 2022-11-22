@@ -35,10 +35,13 @@ The following dependencies must be installed on your computer
 ### Setup SDDM
 Look at
 > /usr/lib/sddm/sddm.conf.d/
+
 there should be a **default.conf** edit the file and in theme section specift 
+
 > Current = multicolor-sddm-theme
 
 P.S. if the first folder don't exist look 
+
 > /etc/sddm.conf
 
 ### Resources
