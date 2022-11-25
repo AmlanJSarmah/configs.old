@@ -1,6 +1,3 @@
-shell:
-  program: /usr/bin/fish
-
 schemes:
 # this is the dracula theme
   dracula: &dracula
@@ -187,14 +184,14 @@ padding:
  # ~/.config/alacritty/alacritty.yml
 font:
   normal:
-    family: Source Code Pro
+    family: Fira Code Nerd Font 
 
   bold:
-    family: Fira Code Nerd Font
+    family: Fira Code Nerd Font 
     style: Bold
 
   italic:
-    family: Source Code Pro
+    family: Fira Code Nerd Font 
     style: Italic
 
   size: 8.5
