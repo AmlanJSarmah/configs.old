@@ -1,5 +1,5 @@
 # window-manager-config
-My Qtile config along with various utils like lf(file manager), alacritty(terminal emulator), starship, picom, fish, rofi, nvim.
+My Qtile config along with various utils like lf(file manager), alacritty(terminal emulator), starship, picom, fish, rofi, neovim.
 
 ### Screenshots
 ![desktop1](https://user-images.githubusercontent.com/99042379/194882428-e7a565b1-918d-4d14-8484-d0b64ef453f2.png)
@@ -45,7 +45,7 @@ P.S. if the first folder don't exist look
 > /etc/sddm.conf
 
 ### Resources
-There are a no of resources that helped mw with the config specially with Neovim, Picom and Rofi. Here is the list of all the resources 
+There are a number of resources that helped me with the config specially with Neovim, Picom and Rofi. Here is the list of all the resources 
 1. For Rofi and Picom : https://www.youtube.com/c/EricMurphyxyz
 2. For Nvim : https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
 
