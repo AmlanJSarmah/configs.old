@@ -2,10 +2,14 @@
 My Qtile config along with various utils like lf(file manager), alacritty(terminal emulator), starship, picom, fish, rofi, neovim.
 
 ### Screenshots
-![desktop1](https://user-images.githubusercontent.com/99042379/194882428-e7a565b1-918d-4d14-8484-d0b64ef453f2.png)
-![desktop2](https://user-images.githubusercontent.com/99042379/194882481-e0310524-66e9-4316-93cf-8d0e913d9a09.png)
-![2022-10-10-193921_1920x1080_scrot](https://user-images.githubusercontent.com/99042379/194885764-6fa15801-d3f8-474b-86c1-631bc8d303a8.png)
-![neovim](https://user-images.githubusercontent.com/99042379/197107570-bcf3229d-08af-4c98-80c8-594ce2246b3f.png)
+
+#### Qtile
+![2022-11-27-12:42:04-screenshot](https://user-images.githubusercontent.com/99042379/204123763-f96fd977-bd79-407e-b6c5-56d75d0fb0c1.png)
+![2022-11-27-12:42:53-screenshot](https://user-images.githubusercontent.com/99042379/204123770-fc6a0bc7-bb50-46c7-b021-86f92f612124.png)
+![2022-11-27-12:43:13-screenshot](https://user-images.githubusercontent.com/99042379/204123773-ed06c706-bfb7-4fd3-850f-eee3fbbfbb62.png)
+![2022-11-27-12:43:42-screenshot](https://user-images.githubusercontent.com/99042379/204123780-effde93b-9cda-43fa-860f-90e250879bf2.png)
+
+
 
 ### Dependencies
 The following dependencies must be installed on your computer
