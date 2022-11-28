@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+########################################### Set up the config ##############################################
 import os
 import subprocess
 from libqtile import qtile
@@ -6,7 +6,7 @@ from libqtile.config import Click, Drag, Group, KeyChord, Key, Match, Screen
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
-from utils import battery_display, connect
+from utils import battery_display
 
 class Colors:
     BLACK: str = "000000"
@@ -20,6 +20,10 @@ terminal = "alacritty"      # My terminal of choice
 myBrowser = "firefox" # My browser of choice
 palette = Colors()
 home = os.path.expanduser('~')
+
+
+########################################## Keybindings ###########################################################
+
 
 keys = [
     # Move window focus
@@ -51,7 +55,7 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod, "control"], "c", lazy.spawn("betterlockscreen -l"),desc="locks the damn screen"),
-    Key([mod], "r", lazy.spawn("dmenu_run -l 10 -fn 'Source Code Pro-12' -p 'Run'"), desc="Launch Dmenu run prompt"),
+    Key([mod], "r", lazy.spawn("dmenu_run -l 10 -fn 'Fira Code Nerd Font-12' -p 'Run'"), desc="Launch Dmenu run prompt"),
 
     # Custom keybindings for screenshot, brightness and volume
     Key([mod], "s", lazy.spawn(str(home) + "/.local/bin/screenshot.sh all"),desc="Take a screenshot of entire screen"),
@@ -63,11 +67,15 @@ keys = [
     Key([mod, "shift"], "b", lazy.spawn(str(home) + "/.local/bin/changebrightness.sh down"),desc="Decrease brightness"),
 ]
 
+
+#############################################3 Screen Layouts #############################################
+
+
 layout_theme = {
-                "border_width": 2,
+                "border_width": 4,
                 "margin": 8,
-                "border_focus": "e1acff",
-                "border_normal": "1D2330"
+                "border_focus": "A54242",
+                "border_normal": "0074e4"
                 }
 
 layouts = [
@@ -87,19 +95,24 @@ layouts = [
     #layout.Floating(**layout_theme)
 ]
 
+
+
+###################################### Workspaces #####################################################
+
+
 groups = [Group(i) for i in "123456789"]
 
 for i in groups:
     keys.extend(
         [
-            # mod + letter of group = switch to group
+            # mod1 + letter of group = switch to group
             Key(
                 [mod],
                 i.name,
                 lazy.group[i.name].toscreen(),
                 desc="Switch to group {}".format(i.name),
             ),
-            # mod + shift + letter of group = switch to & move focused window to group
+            # mod1 + shift + letter of group = switch to & move focused window to group
             Key(
                 [mod, "shift"],
                 i.name,
@@ -109,14 +122,17 @@ for i in groups:
         ]
     )
 
+
+
+########################################## Bar and Widgets ####################################################
+
 widget_defaults = dict(
-    font='Source Code Pro',
-    fontsize=13,
+    font='Fira Code Nerd Font',
+    fontsize=15,
     padding=7,
 )
+
 extension_defaults = widget_defaults.copy()
-# Separator Widget
-# separator = widget.Sep(foreground=palette.DARK)
 separator = widget.TextBox(text=" ",padding=5)
 
 screens = [
@@ -145,31 +161,24 @@ screens = [
                 widget.Spacer(),
                 widget.Systray(),
                 separator,
+                widget.Mpris2(name="spotify", stop_pause_text="  {track}",playing_text="  {track}",display_metadata=["xesam:title", "xesam:artist"], objname="org.mpris.MediaPlayer2.spotify"),
                 separator,
-                widget.TextBox(text="", fontsize=24, padding=0, mouse_callbacks={"Button1":lazy.spawn(myBrowser + " -new-window github.com/A-J-Sarmah")}),
-                separator,
-                separator,
-                widget.TextBox(text="墳", fontsize=24, padding=0, mouse_callbacks={"Button1":lazy.spawn(str(home) + "/.local/bin/changevolume.sh mute"), "Button4":lazy.spawn(str(home) + "/.local/bin/changevolume.sh up"), "Button5":lazy.spawn(str(home) + "/.local/bin/changevolume.sh down")}),
+                widget.TextBox(text=" ",  padding=0, mouse_callbacks={"Button1":lazy.spawn(myBrowser + " -new-window github.com/A-J-Sarmah")}),
                 separator,
                 separator,
-                widget.TextBox(text="", fontsize=24, padding=0, mouse_callbacks={"Button1":lambda:qtile.cmd_spawn("spotify")}),
-                # widget for spotify track info and control!
-                widget.Mpris2(name="spotify",padding=0, stop_pause_text="  {track}",playing_text="  {track}",display_metadata=["xesam:title", "xesam:artist"], objname="org.mpris.MediaPlayer2.spotify"),
+                widget.TextBox(text=" ",  padding=0, mouse_callbacks={"Button1":lazy.spawn(str(home) + "/.local/bin/changevolume.sh mute"), "Button4":lazy.spawn(str(home) + "/.local/bin/changevolume.sh up"), "Button5":lazy.spawn(str(home) + "/.local/bin/changevolume.sh down")}),
                 separator,
                 separator,
                 widget.Battery(format=battery_display(),padding=0,update_interval=1),
                 separator,
                 separator,
-                widget.TextBox(text=connect(),fontsize=20,padding=0),
-                widget.Wlan(format='  {essid}',padding=0), # The Wlan widget uses a library called iwlib as dependency so to use it we must install 'iwlib' via the pip package manager.
+                widget.Wlan(format='直  {essid}',disconnected_message="睊  Disconnected",padding=0), # The Wlan widget uses a library called iwlib as dependency so to use it we must install 'iwlib' via the pip package manager.
                 separator,
                 separator,
-                widget.TextBox(text="", fontsize = 20, padding = 0),
-                widget.Clock(format='  %I:%M %p', padding=0),
+                widget.Clock(format='  %I:%M %p', padding=0),
                 separator,
                 separator,
-                widget.TextBox(text="", fontsize = 20 ,padding=0),
-                widget.Clock(format = '  %a %d/%m/%y',padding=0),
+                widget.Clock(format = '  %a %d/%m/%y',padding=0),
                 separator,
             ],
             20,
@@ -179,6 +188,10 @@ screens = [
         ),
     ),
 ]
+
+
+################################################################# Autostart apps ###################################################################
+
 
 @hook.subscribe.startup
 def autostart():

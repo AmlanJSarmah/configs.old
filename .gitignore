@@ -1,4 +1,5 @@
 dconf/
+__pycache__/
 discord/
 GIMP/
 google-chrome/
