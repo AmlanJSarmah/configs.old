@@ -1,5 +1,5 @@
 # window-manager-config
-My Qtile config along with various utils like lf(file manager), alacritty(terminal emulator), starship, picom, fish, rofi, neovim.
+Bspwm and Qtile config along with various utils like lf(file manager), alacritty(terminal emulator), starship, picom, fish, rofi, neovim.
 
 ### Screenshots
 
