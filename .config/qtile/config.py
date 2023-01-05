@@ -72,10 +72,10 @@ keys = [
 
 
 layout_theme = {
-                "border_width": 4,
+                "border_width": 2,
                 "margin": 8,
-                "border_focus": "A54242",
-                "border_normal": "0074e4"
+                "border_focus": "e1acff",
+                "border_normal": "1D2330"
                 }
 
 layouts = [
