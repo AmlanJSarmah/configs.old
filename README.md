@@ -23,7 +23,7 @@ Bspwm and Qtile config along with various utils like lf(file manager), alacritty
 The following dependencies must be installed on your computer
 1. alacritty
 2. fish
-3. helix
+3. VS Code(look in AUR, or snap store) 
 4. lf
 5. neovim
 6. picom (it is a compositor used in qtile while autostart)
