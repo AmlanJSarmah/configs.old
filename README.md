@@ -4,6 +4,7 @@ Bspwm and Qtile config along with various utils like lf(file manager), alacritty
 ### Screenshots
 
 #### Qtile
+![unixporn_1](https://user-images.githubusercontent.com/99042379/212806313-ced664bb-bfd8-4920-8864-6dc73361f0f9.png)
 ![2022-11-27-12:42:04-screenshot](https://user-images.githubusercontent.com/99042379/204123763-f96fd977-bd79-407e-b6c5-56d75d0fb0c1.png)
 ![2022-11-27-12:42:53-screenshot](https://user-images.githubusercontent.com/99042379/204123770-fc6a0bc7-bb50-46c7-b021-86f92f612124.png)
 
