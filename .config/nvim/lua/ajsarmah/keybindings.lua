@@ -19,6 +19,11 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
+
+-- File Explorer
+keymap("n", "<leader>e", ":Lex 20<cr>", opts)
+keymap("n", "<leader>E", ":Explore<cr>", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -34,7 +39,6 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n","<C-b>",":badd .<cr> | :Telescope buffers<cr>",opts)
 keymap("n","<leader>b",":Telescope buffers<cr>",opts)
 keymap("n","<leader>f",":Telescope find_files<cr>",opts)
 

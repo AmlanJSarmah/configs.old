@@ -51,12 +51,7 @@ use "nvim-telescope/telescope.nvim" -- telescope search engine
 
 -- Colorschemes
 use 'dracula/vim'
-use 'sainnhe/everforest'
+use 'folke/tokyonight.nvim'
 use 'romgrk/doom-one.vim'
-use 'arcticicestudio/nord-vim'
+use 'ntk148v/vim-horizon'
 end)
-
-
-
-
-

@@ -10,10 +10,3 @@ require "ajsarmah.bufferline"
 -- Programming
 require "ajsarmah.treesitter"
 require "ajsarmah.toggleterm"
-
-
-
-
-
-
-

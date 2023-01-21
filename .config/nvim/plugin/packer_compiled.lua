@@ -94,20 +94,10 @@ _G.packer_plugins = {
     path = "/home/ajsarmah/.local/share/nvim/site/pack/packer/start/doom-one.vim",
     url = "https://github.com/romgrk/doom-one.vim"
   },
-  everforest = {
-    loaded = true,
-    path = "/home/ajsarmah/.local/share/nvim/site/pack/packer/start/everforest",
-    url = "https://github.com/sainnhe/everforest"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/ajsarmah/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
-  ["nord-vim"] = {
-    loaded = true,
-    path = "/home/ajsarmah/.local/share/nvim/site/pack/packer/start/nord-vim",
-    url = "https://github.com/arcticicestudio/nord-vim"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -144,10 +134,20 @@ _G.packer_plugins = {
     path = "/home/ajsarmah/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/ajsarmah/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   vim = {
     loaded = true,
     path = "/home/ajsarmah/.local/share/nvim/site/pack/packer/start/vim",
     url = "https://github.com/dracula/vim"
+  },
+  ["vim-horizon"] = {
+    loaded = true,
+    path = "/home/ajsarmah/.local/share/nvim/site/pack/packer/start/vim-horizon",
+    url = "https://github.com/ntk148v/vim-horizon"
   }
 }
 
