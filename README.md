@@ -1,23 +1,22 @@
 # window-manager-config
 Bspwm and Qtile config along with various utils like lf(file manager), alacritty(terminal emulator), starship, picom, fish, rofi, neovim.
 
+
 ### Screenshots
 
 #### Qtile
-![unixporn_1](https://user-images.githubusercontent.com/99042379/212806313-ced664bb-bfd8-4920-8864-6dc73361f0f9.png)
-![2022-11-27-12:42:04-screenshot](https://user-images.githubusercontent.com/99042379/204123763-f96fd977-bd79-407e-b6c5-56d75d0fb0c1.png)
-![2022-11-27-12:42:53-screenshot](https://user-images.githubusercontent.com/99042379/204123770-fc6a0bc7-bb50-46c7-b021-86f92f612124.png)
+![qtile_1](https://user-images.githubusercontent.com/99042379/214271273-9d1f4cc5-9c9e-4ca6-bf83-6c990fef5422.png)
+![qtile_2](https://user-images.githubusercontent.com/99042379/214271350-60fa9127-b765-4fec-9999-b21304f8639e.png)
 
 #### Bspwm Window Manager
-![2022-12-13-21:13:37-screenshot](https://user-images.githubusercontent.com/99042379/208378056-10cc7a06-cccc-4b2c-b247-47f5548f9c9c.png)
-![2022-12-13-21:14:44-screenshot](https://user-images.githubusercontent.com/99042379/208378070-197abd98-1bc8-4e7c-9e03-2a33b62b6022.png)
+![bspwm_1](https://user-images.githubusercontent.com/99042379/214271390-4dfdc9cf-9332-4b80-8be1-39ce165d726e.png)
+![bspwm_2](https://user-images.githubusercontent.com/99042379/214271437-54eb39fb-7dc9-460f-8784-f9a85a881b01.png)
 
 #### LF file manager
-![2022-11-27-12:43:13-screenshot](https://user-images.githubusercontent.com/99042379/204123773-ed06c706-bfb7-4fd3-850f-eee3fbbfbb62.png)
+![lf](https://user-images.githubusercontent.com/99042379/214271464-965e5464-3d1b-481c-a7ed-c9002c2cf7fc.png)
 
 #### Neovim(text editor)
-![2022-11-27-12:43:42-screenshot](https://user-images.githubusercontent.com/99042379/204123780-effde93b-9cda-43fa-860f-90e250879bf2.png)
-
+![neovim](https://user-images.githubusercontent.com/99042379/214271588-fbf93aef-4c54-4af8-b5f2-32e4bc72c6df.png)
 
 
 ### Dependencies
@@ -45,6 +44,7 @@ The following dependencies must be installed on your computer
 21. sddm login manager
 22. multicolor-sddm-theme (look AUR)
 
+
 ### Setup SDDM
 Look at
 > /usr/lib/sddm/sddm.conf.d/
@@ -57,9 +57,11 @@ P.S. if the first folder don't exist look
 
 > /etc/sddm.conf
 
+
 ### Resources
 There are a number of resources that helped me with the config specially with Neovim, Picom and Rofi. Here is the list of all the resources 
 1. For Rofi and Picom : https://www.youtube.com/c/EricMurphyxyz
 2. For Nvim : https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
+3. The Starship prompt has been taken from Distro Tube's config with minimal configuration
 
 PS: The configs for rofi is identical as show in the videos by Eric Murphy, but the Neovim configs is heavily customized and only uses the playlist by chris@machine as a referance.
