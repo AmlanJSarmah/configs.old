@@ -62,6 +62,9 @@ P.S. if the first folder don't exist look
 There are a number of resources that helped me with the config specially with Neovim, Picom and Rofi. Here is the list of all the resources 
 1. For Rofi and Picom : https://www.youtube.com/c/EricMurphyxyz
 2. For Nvim : https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
-3. The Starship prompt has been taken from Distro Tube's config.
 
 PS: The configs for rofi is identical as show in the videos by Eric Murphy, but the Neovim configs is heavily customized and only uses the playlist by chris@machine as a referance.
+
+
+### Credits
+1. The Starship prompt has been taken from Distro Tube's config.
