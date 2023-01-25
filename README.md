@@ -6,7 +6,7 @@ Bspwm and Qtile config along with various utils like lf(file manager), alacritty
 
 #### Qtile
 ![qtile_1](https://user-images.githubusercontent.com/99042379/214271273-9d1f4cc5-9c9e-4ca6-bf83-6c990fef5422.png)
-![qtile_2](https://user-images.githubusercontent.com/99042379/214271350-60fa9127-b765-4fec-9999-b21304f8639e.png)
+![qtile_2](https://user-images.githubusercontent.com/99042379/214569350-1aeec7d3-64e7-475d-98bf-49e08cdf4f8a.png)
 
 #### Bspwm Window Manager
 ![bspwm_1](https://user-images.githubusercontent.com/99042379/214271390-4dfdc9cf-9332-4b80-8be1-39ce165d726e.png)
