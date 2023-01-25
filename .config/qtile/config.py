@@ -9,11 +9,10 @@ from libqtile.lazy import lazy
 from utils import battery_display
 
 class Colors:
-    BLACK: str = "000000"
-    DARK: str = "1A1B26"
+    DARK: str = "282a36"
     WHITE: str = "ffffff"
-    PRIMARY: str = "0074e4"
-    SECONDARY: str = "3D59A1"
+    BORDER_ACTIVE: str = "e1acff"
+    BORDER_INACTIVE: str = "1D2330" 
 
 mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 terminal = "alacritty"      # My terminal of choice
@@ -74,8 +73,8 @@ keys = [
 layout_theme = {
                 "border_width": 2,
                 "margin": 8,
-                "border_focus": "e1acff",
-                "border_normal": "1D2330"
+                "border_focus": palette.BORDER_ACTIVE,
+                "border_normal": palette.BORDER_INACTIVE
                 }
 
 layouts = [
@@ -92,7 +91,7 @@ layouts = [
     layout.Max(**layout_theme),
     #layout.Stack(num_stacks=2),
     #layout.RatioTile(**layout_theme),
-    #layout.Floating(**layout_theme)
+    layout.Floating(**layout_theme)
 ]
 
 
@@ -141,23 +140,17 @@ screens = [
             [
                 #separator,
                 widget.GroupBox(
-                    fontsize=13,
-                    padding_x=5,
-                    borderwidth=0,
+                    # Color of the nos 1, 2, 3 ...
                     active=palette.WHITE,
                     inactive=palette.WHITE,
-                    rounded=True,
+
+                    #Color the entire workspace
                     highlight_method="block",
-                    highlight_color=palette.DARK,
-                    block_highlight_text_color=palette.WHITE,
-                    this_current_screen_border=palette.SECONDARY,
-                    foreground=palette.DARK,
-                    background=palette.DARK,
+
+                    #Hides the unused workspaces
                     hide_unused=True
                 ),
                 separator,
-                #widget.Prompt(),
-                #widget.WindowName(fontsize=15, format='{name}'),
                 widget.Spacer(),
                 widget.Systray(),
                 separator,
@@ -181,7 +174,7 @@ screens = [
                 widget.Clock(format = '  %a %d/%m/%y',padding=0),
                 separator,
             ],
-            20,
+            25,
             margin=[10, 10, 0, 10],
             background=palette.DARK,
             opacity=1,
@@ -197,4 +190,3 @@ screens = [
 def autostart():
     home = os.path.expanduser('~')
     subprocess.run([home + '/.config/qtile/autostart.sh'])
-
