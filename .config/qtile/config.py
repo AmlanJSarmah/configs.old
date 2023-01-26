@@ -159,7 +159,6 @@ screens = [
                     # Hides the unused workspaces
                     hide_unused=True
                 ),
-                separator,
                 widget.Spacer(),
                 widget.Systray(),
                 separator,
