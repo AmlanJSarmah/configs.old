@@ -13,10 +13,11 @@ class Colors:
     WHITE: str = "ffffff"
     BORDER_ACTIVE: str = "e1acff"
     BORDER_INACTIVE: str = "1D2330" 
+    WORKSPACE_BLOCK_COLOR = "6272a4"
 
 mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 terminal = "alacritty"      # My terminal of choice
-myBrowser = "firefox" # My browser of choice
+browser = "firefox" # My browser of choice
 palette = Colors()
 home = os.path.expanduser('~')
 
@@ -32,13 +33,13 @@ keys = [
     Key([mod], "k", lazy.layout.grow(),lazy.layout.decrease_nmaster(), desc="Move focus up"),
     Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
     
-    #Suffle windows
+    # Suffle windows
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
     Key([mod, "shift"], "l", lazy.layout.shuffle_right(), desc="Move window to the right"),
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
     
-    #Change window size
+    # Change window size
     Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
     Key([mod, "control"], "l", lazy.layout.grow_right(), desc="Grow window to the right"),
     Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
@@ -46,7 +47,7 @@ keys = [
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
    
 
-    #WM related binding
+    # WM related binding
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod],"f",lazy.spawn("rofi -show drun"), desc="Launch Rofi App Launcher"),
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
@@ -138,16 +139,24 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                #separator,
                 widget.GroupBox(
-                    # Color of the nos 1, 2, 3 ...
+                    # Color of the nos in workspace tabs like 1, 2, 3. 4
                     active=palette.WHITE,
                     inactive=palette.WHITE,
 
-                    #Color the entire workspace
+                    # Removes border from the workspace tabs
+                    borderwidth=0,                    
+
+                    # Removes unwanted default margin
+                    margin_x=0,
+
+                    # Color the workspace block 
+                    this_current_screen_border=palette.WORKSPACE_BLOCK_COLOR,
+
+                    # Color the entire workspace
                     highlight_method="block",
 
-                    #Hides the unused workspaces
+                    # Hides the unused workspaces
                     hide_unused=True
                 ),
                 separator,
@@ -156,7 +165,7 @@ screens = [
                 separator,
                 widget.Mpris2(name="spotify", stop_pause_text="  {track}",playing_text="  {track}",display_metadata=["xesam:title", "xesam:artist"], objname="org.mpris.MediaPlayer2.spotify"),
                 separator,
-                widget.TextBox(text=" ",  padding=0, mouse_callbacks={"Button1":lazy.spawn(myBrowser + " -new-window github.com/A-J-Sarmah")}),
+                widget.TextBox(text=" ",  padding=0, mouse_callbacks={"Button1":lazy.spawn(browser + " -new-window github.com/A-J-Sarmah")}),
                 separator,
                 separator,
                 widget.TextBox(text=" ",  padding=0, mouse_callbacks={"Button1":lazy.spawn(str(home) + "/.local/bin/changevolume.sh mute"), "Button4":lazy.spawn(str(home) + "/.local/bin/changevolume.sh up"), "Button5":lazy.spawn(str(home) + "/.local/bin/changevolume.sh down")}),
