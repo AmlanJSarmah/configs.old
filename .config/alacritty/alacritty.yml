@@ -18,7 +18,7 @@ schemes:
       focused_match:
         foreground: '#44475a'
         background: '#ffb86c'
-      bar:
+      footer_bar:
         background: '#282a36'
         foreground: '#f8f8f2'
     hints:
@@ -73,7 +73,7 @@ schemes:
       matches:
         foreground: CellBackground
         background: '#88c0d0'
-      bar:
+      footer_bar:
         background: '#434c5e'
         foreground: '#d8dee9'
     normal:
@@ -178,9 +178,10 @@ schemes:
       cyan:    '0x46d9ff'
       white:   '0xbbc2cf'
 
-padding:
-    x : 6
-    y : 6
+window:
+  padding:
+    x : 4
+    y : 4
  # ~/.config/alacritty/alacritty.yml
 font:
   normal:
@@ -204,4 +205,4 @@ font:
     x: 0
     y: 0
 
-colors: *doom-one
+colors: *dracula
