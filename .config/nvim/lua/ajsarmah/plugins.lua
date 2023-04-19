@@ -54,4 +54,11 @@ use 'dracula/vim'
 use 'folke/tokyonight.nvim'
 use 'romgrk/doom-one.vim'
 use 'ntk148v/vim-horizon'
+
+-- LSP
+use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+}
 end)
