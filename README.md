@@ -29,7 +29,7 @@ The following dependencies must be installed on your computer
 6. picom (it is a compositor used in qtile while autostart)
 7. qtile
 8. Rofi
-9. Source Code Pro and Fira Code Nerd Fonts
+9. Source Code Pro and Fira Code Nerd Fonts (put it in /home/ajsarmah/.local/share/fonts)
 10. Nitrogen (wallpaper utility used in qtile when autostart)
 11. Neovim - packer.nvim (used in neovim)
 12. betterlockscreen (look in AUR, used to lock the screen)
