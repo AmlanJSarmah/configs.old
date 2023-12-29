@@ -43,6 +43,7 @@ The following dependencies must be installed on your computer
 20. pavucontrol and pamixer for scripts
 21. sddm login manager
 22. multicolor-sddm-theme (look AUR)
+23. blueman for bluetooth management
 
 
 ### Setup SDDM
