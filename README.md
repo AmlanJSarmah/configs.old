@@ -38,7 +38,7 @@ The following dependencies must be installed on your computer
 15. Starship prompt
 16. exa (an alternative to ls)
 17. dmenu
-18. Drunst (notification daemon)
+18. Dunst (notification daemon)
 19. Brillo (for brightness, look AUR)
 20. pavucontrol and pamixer for scripts
 21. sddm login manager
